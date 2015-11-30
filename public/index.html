@@ -6,16 +6,18 @@
   <link rel="stylesheet" href="/app.css">
 </head>
 <body>
+  <div class="container">
   <nav class="nav-bar">
-    <ul class="run-list">
-      <li class="run-log">
-        <span class="run-date"></span>
-        <span class="run-time"></span>
-      </li>
-    </ul>
+    <p class="header">Run Timer</p>
   </nav>
-  <button class="new-run"></button>
-
+  <ul class="run-list">
+    <li class="run-log">
+      <input class="list-items" type="date" id="run-date">
+      <input class="list-items" type="time" id="run-time">
+    </li>
+  </ul>
+  <button class="post-new"><i class="fa fa-plus-circle"></i></button>
+  </div>
 
   <div id="outlet"></div>
 

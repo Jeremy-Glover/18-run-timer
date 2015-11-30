@@ -13,3 +13,64 @@ $Regular_Text: rgba(255, 255, 255, 0.6);
 $Placeholder_Text: rgba(255, 255, 255, 0.4);
 $Green_Text: #92cbc5;
 $Button_Text_Grey: #1c1c1c;
+$Background_Grey: #3e4349;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 550px;
+  margin: auto;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.nav-bar {
+  color: $Title_White;
+  background-color: $Header_Bar_Blue;
+  height: 2.5rem;
+  padding-left: 10px;
+}
+
+.run-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background: $Background_Grey;
+}
+
+.run-log {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px $Button_Text_Grey solid;
+  margin: 5px;
+}
+
+#run-date {
+  color: $Button_Text_Grey;
+  border: 0;
+  background-color: $Background_Grey;
+}
+
+#run-time {
+  color: $Button_Green;
+  border: 0;
+  background-color: $Background_Grey;
+}
+
+.post-new {
+  display: flex;
+  font-size: 2rem;
+  background: $Button_Green;
+  color: $Title_White;
+  border: 10px $Button_Green solid;
+  border-radius: 50%;
+  float: right;
+}
