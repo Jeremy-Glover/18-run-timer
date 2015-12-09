@@ -6,10 +6,10 @@ import RunForm from './views/run-form';
 var Router = Backbone.Router.extend({
 
   routes: {
-    '': 'listAllRuns',
-    new: 'newRun',
-    ':id': 'showOneRun',
-    ':id/edit': 'editRun',
+    '': `listAllRuns`,
+    new: `newRun`,
+    ':id': `showOneRun`,
+    ':id/edit': `editRun`,
   },
 
   initialize() {
@@ -32,7 +32,7 @@ var Router = Backbone.Router.extend({
     $('#outlet').html(form.el);
   },
 
-  showOneRun() {
+  showOneRun(id) {
 
   },
 

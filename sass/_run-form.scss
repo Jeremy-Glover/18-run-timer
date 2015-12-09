@@ -1,0 +1,54 @@
+@import "yoga";
+@import "normalize";
+
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
+@import "font-awesome";
+@import "box-sizing";
+
+$Button_Grey: #ddd;
+$Button_Green: #80cbc4;
+$Header_Bar_Blue: #00bbd3;
+$Title_White: #fff;
+$Regular_Text: rgba(255, 255, 255, 0.6);
+$Placeholder_Text: rgba(255, 255, 255, 0.4);
+$Green_Text: #92cbc5;
+$Button_Text_Grey: #1c1c1c;
+$Background_Grey: #3e4349;
+
+.new-run__head {
+  color: $Title_White;
+}
+
+.new-run {
+  margin: 10px;
+  list-style: none;
+}
+
+.new-run__log {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: $Background_Grey;
+}
+
+input[type="text"] {
+  background: $Background_Grey;
+  border: none;
+  margin: 5px;
+  border-bottom: 1px $Button_Text_Grey solid;
+}
+
+.new-run__btns {
+  margin-top: 20px;
+}
+
+.save-btn {
+  padding: 1rem;
+  float: right;
+  background: $Button_Green;
+}
+
+.cancel-btn {
+  padding: 1rem;
+  background: $Button_Grey;
+}

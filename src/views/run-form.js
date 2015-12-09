@@ -26,11 +26,18 @@ export default Backbone.View.extend({
 
   template(model) {
     return `
-    <input type="text" value="${model.get('time')}" id="name" placeholder="Time">
-    <input type="text" value="${model.get('date')}" id="date" placeholder="Date">
-    <input type="text" value="${model.get('notes')}" id="notes" placeholder="Notes">
-
-    <button>Submit</button>
+    <ul class="new-run">
+      <li class="new-run__log">
+        <h2 class="new-run__head">New Run</h2>
+        <input type="text" value="${model.get('time')}" id="name" placeholder="Run Time">
+        <input type="text" value="${model.get('date')}" id="date" placeholder="Race Date">
+        <input type="text" value="${model.get('notes')}" id="notes" placeholder="Race Notes">
+      </li>
+      <li class="new-run__btns">
+        <button class="cancel-btn">Cancel</button>
+        <button class="save-btn">Save</button>
+      </li>
+    </ul>
     `;
   },
 });
