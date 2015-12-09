@@ -1,0 +1,10 @@
+<ul class="run-list">
+  <li class="run-log">
+    <span class="list-items date">Dec 1, 2015</span>
+    <span class="list-items time">00:23:15</span>
+  </li>
+
+  <li>
+    <button class="post-new"><i class="fa fa-plus-circle"></i></button>
+  </li>
+</ul>
