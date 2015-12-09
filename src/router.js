@@ -1,3 +1,5 @@
+import ListView from './views/list-view';
+
 var Router = Backbone.Router.extend({
 
   routes: {
@@ -5,7 +7,11 @@ var Router = Backbone.Router.extend({
     new: 'newRun',
     ':id:': 'showOneRun',
     ':id/edit': 'editRun',
-},
+  },
+
+  listAllRuns() {
+
+  },
 
 });
 

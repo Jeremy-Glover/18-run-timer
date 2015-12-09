@@ -17,13 +17,13 @@ $Background_Grey: #3e4349;
 
 html {
   box-sizing: border-box;
+  background-color: $Background_Grey;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 .container {
-  width: 550px;
   margin: auto;
   font-family: Roboto;
   font-size: 16px;
@@ -37,11 +37,14 @@ html {
   padding-left: 10px;
 }
 
+.header {
+  margin: 0;
+}
+
 .run-list {
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 0;
   list-style-type: none;
   background: $Background_Grey;
 }
@@ -53,16 +56,12 @@ html {
   margin: 5px;
 }
 
-#run-date {
+.date {
   color: $Button_Text_Grey;
-  border: 0;
-  background-color: $Background_Grey;
 }
 
-#run-time {
+.time {
   color: $Button_Green;
-  border: 0;
-  background-color: $Background_Grey;
 }
 
 .post-new {
