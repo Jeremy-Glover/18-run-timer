@@ -17,13 +17,15 @@ export default Backbone.View.extend({
 
   template(collection) {
     return collection.map((model) => {
-      return `<li>
-        <span>${model.get('date')}</span>
-        <span>${model.get('time')}</span>
-      </li>
-      <li>
-        <a href="#new" class="post-new"><i class="fa fa-plus-circle"></i></a>
-      </li>`;
+      return `<ul class="run-list">
+        <li class="run-log">
+          <span class="list-items date">${model.get('date')}</span>
+          <span class="list-items time">${model.get('time')}</span>
+        </li>
+        <li>
+          <a href="#new" class="post-new"><i class="fa fa-plus-circle"></i></a>
+        </li>
+      </ul>`;
     });
   },
 });
