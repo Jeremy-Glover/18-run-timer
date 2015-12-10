@@ -2,6 +2,7 @@ import RunInfo from './models/run-info';
 import ListCollection from './collections/run-times';
 import ListView from './views/index-view';
 import RunForm from './views/run-form';
+import RunDetail from './views/detail-run';
 
 var Router = Backbone.Router.extend({
 
@@ -10,6 +11,13 @@ var Router = Backbone.Router.extend({
     new: `newRun`,
     ':id': `showOneRun`,
     ':id/edit': `editRun`,
+  },
+
+  list: null,
+
+  cleanUpListners() {
+
+    this.list.off('sync');
   },
 
   initialize() {
@@ -33,11 +41,35 @@ var Router = Backbone.Router.extend({
   },
 
   showOneRun(id) {
+    var lookupRunInfo = () => {
+      var runInfo = this.runInfo.get(id);
 
+      if (runInfo) {
+        var runDetail = new RunDetail({model: runInfo});
+
+        $('#outlet').html(runDetail.el);
+      }
+    };
+
+    lookupRunInfo();
+
+    this.contacts.on('sync', lookupRunInfo);
   },
 
-  editRun() {
+  editRun(id) {
+    var lookupRunInfo = () => {
+      var runInfo = this.runInfo.get(id);
 
+      if (runInfo) {
+        var runDetail = new RunForm({model: runInfo, collection: this.list});
+
+        $('#outlet').html(runDetail.el);
+      }
+    };
+
+    lookupRunInfo();
+
+    this.contacts.on('sync', lookupRunInfo);
   },
 
 });

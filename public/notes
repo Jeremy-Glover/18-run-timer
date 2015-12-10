@@ -5,6 +5,9 @@
   </li>
 
   <li>
-    <button class="post-new"><i class="fa fa-plus-circle"></i></button>
+    <a href="#new" class="post-new"><i class="fa fa-plus-circle"></i></a>
   </li>
 </ul>
+
+<span>${model.get('date')}</span>
+<span>${model.get('time')}</span>
