@@ -26,8 +26,8 @@ export default Backbone.View.extend({
         </li>
         <li class="run-detail__note">notes: ${model.get('notes')}</li>
         <li>
-          <button><a href="#">Back</a></button>
-          <button><a href="#${model.id}/edit">Edit</a></p>a></button>
+          <a href="#"><button>Back</button></a>
+          <a href="#${model.id}/edit" class="edit-btn"><i class="fa fa-pencil"></i></a>
         </li>
       </ul>
     `;

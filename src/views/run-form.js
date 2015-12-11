@@ -11,7 +11,9 @@ export default Backbone.View.extend({
 
       this.model.save({time, date, notes})
         .then(() => {
-          Backbone.history.navigate('#', {trigger: true});
+          this.collection.add(this.listAllRuns);
+
+          Backbone.history.navigate('', {trigger: true});
         });
     },
   },
@@ -35,7 +37,7 @@ export default Backbone.View.extend({
       </li>
       <li class="new-run__btns">
         <button class="cancel-btn">Cancel</button>
-        <button class="save-btn">Save</button>
+        <a href="#${model.id}/edit"><button class="save-btn">Save</button></a>
       </li>
     </ul>
     `;

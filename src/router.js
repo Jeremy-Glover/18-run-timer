@@ -35,7 +35,7 @@ var Router = Backbone.Router.extend({
   newRun() {
     var runInfo = new RunInfo();
 
-    var form = new RunForm({model: runInfo});
+    var form = new RunForm({model: runInfo, collection: this.list});
 
     $('#outlet').html(form.el);
   },
@@ -45,7 +45,7 @@ var Router = Backbone.Router.extend({
       var runInfo = this.runInfo.get(id);
 
       if (runInfo) {
-        var runDetail = new RunDetail({model: runInfo});
+        var runDetail = new RunDetail({model: runInfo, collection: this.list});
 
         $('#outlet').html(runDetail.el);
       }
@@ -69,7 +69,7 @@ var Router = Backbone.Router.extend({
 
     lookupRunInfo();
 
-    this.contacts.on('sync', lookupRunInfo);
+    this.list.on('sync', lookupRunInfo);
   },
 
 });
