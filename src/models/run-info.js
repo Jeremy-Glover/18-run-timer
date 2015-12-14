@@ -4,7 +4,7 @@ export default Backbone.Model.extend({
   urlRoot: 'http://tiny-lr.herokuapp.com/collections/runs-jg',
 
   defaults: {
-    time: '00:00:00',
+    time: '',
     date: '',
     notes: '',
   },

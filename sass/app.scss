@@ -4,7 +4,6 @@
 $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 @import "font-awesome";
 @import "box-sizing";
-@import "run-form";
 
 $Button_Grey: #ddd;
 $Button_Green: #80cbc4;
@@ -22,6 +21,10 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -64,6 +67,7 @@ html {
 
 .time {
   color: $Button_Green;
+  justify-content: flex-end;
 }
 
 .post-new {
@@ -76,3 +80,6 @@ html {
   float: right;
   text-decoration: none;
 }
+
+@import "run-form";
+@import "run-detail";

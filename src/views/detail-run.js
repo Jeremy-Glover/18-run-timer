@@ -1,15 +1,10 @@
 export default Backbone.View.extend({
+  attributes: {
+    class: 'run-detail',
+  },
 
   initialize() {
     this.render();
-  },
-
-  events: {
-    'click .edit-btn'() {
-      this.model.change().then(() => {
-        Backbone.history.navigate('', {trigger: true});
-      });
-    },
   },
 
   render() {
@@ -18,15 +13,15 @@ export default Backbone.View.extend({
 
   template(model) {
     return `
-      <h2>My Run</h2>
       <ul class="run-detail">
+        <h2 class="run-detail__head">My Run</h2>
         <li class="run-detail__log">
-          <span>date: ${model.get('date')}</span>
-          <span>time: ${model.get('time')}</span>
+          <span class="run-item date">${model.get('date')}</span>
+          <span class="run-item time">${model.get('time')}</span>
         </li>
-        <li class="run-detail__note">notes: ${model.get('notes')}</li>
+        <li class="run-detail__note">${model.get('notes')}</li>
         <li>
-          <a href="#"><button>Back</button></a>
+          <a href="#"><button class= back-btn><</button></a>
           <a href="#${model.id}/edit" class="edit-btn"><i class="fa fa-pencil"></i></a>
         </li>
       </ul>

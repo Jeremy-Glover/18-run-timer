@@ -27,9 +27,9 @@ var Router = Backbone.Router.extend({
   },
 
   listAllRuns() {
-    var list = new ListView({collection: this.list});
+    var listView = new ListView({collection: this.list});
 
-    $('#outlet').html(list.el);
+    $('#outlet').html(listView.el);
   },
 
   newRun() {
@@ -41,8 +41,8 @@ var Router = Backbone.Router.extend({
   },
 
   showOneRun(id) {
-    var lookupRunInfo = () => {
-      var runInfo = this.runInfo.get(id);
+    var showRunInfo = () => {
+      var runInfo = this.list.get(id);
 
       if (runInfo) {
         var runDetail = new RunDetail({model: runInfo, collection: this.list});
@@ -51,14 +51,14 @@ var Router = Backbone.Router.extend({
       }
     };
 
-    lookupRunInfo();
+    showRunInfo();
 
-    this.contacts.on('sync', lookupRunInfo);
+    this.list.on('sync', showRunInfo);
   },
 
   editRun(id) {
-    var lookupRunInfo = () => {
-      var runInfo = this.runInfo.get(id);
+    var showRunInfo = () => {
+      var runInfo = this.list.get(id);
 
       if (runInfo) {
         var runDetail = new RunForm({model: runInfo, collection: this.list});
@@ -67,9 +67,9 @@ var Router = Backbone.Router.extend({
       }
     };
 
-    lookupRunInfo();
+    showRunInfo();
 
-    this.list.on('sync', lookupRunInfo);
+    this.list.on('sync', showRunInfo);
   },
 
 });
