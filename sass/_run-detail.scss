@@ -1,10 +1,10 @@
 .run-detail {
-  margin: 10px;
   list-style: none;
 }
 
 .run-detail__head {
   color: $Title_White;
+  font-weight: lighter;
 }
 
 .run-detail__log {
@@ -13,27 +13,32 @@
 }
 
 .date {
-  color: $Button_Text_Grey;
+  color: $Regular_Text;
 }
 
 .time {
   color: $Button_Green;
+  margin-right: 1rem;
 }
 
 .run-detail__note{
   margin: 2rem auto;
-  color: $Button_Text_Grey;
+  color: $Regular_Text;
 }
 
 .back-btn {
+  position: absolute;
+  bottom: 5%;
   border-radius: 50%;
-  padding: 1rem;
+  padding: 1.3rem;
 }
 
 .edit-btn {
-  float: right;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
   border-radius: 50%;
-  padding: 1rem;
+  padding: 1.3rem;
   background-color: $Button_Green;
   color: $Title_White;
 }

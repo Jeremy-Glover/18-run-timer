@@ -15,35 +15,32 @@ $Green_Text: #92cbc5;
 $Button_Text_Grey: #1c1c1c;
 $Background_Grey: #3e4349;
 
-html {
-  box-sizing: border-box;
-  background-color: $Background_Grey;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 a {
   text-decoration: none;
 }
 
+html {
+  background-color: $Background_Grey;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
 .container {
   margin: auto;
-  font-family: Roboto;
-  font-size: 16px;
-  line-height: 24px;
 }
 
 .nav-bar {
   color: $Title_White;
   background-color: $Header_Bar_Blue;
   height: 2.5rem;
-  padding-left: 10px;
+  padding-left: 2.1rem;
 }
 
 .header {
   margin: 0;
-  padding: 5px;
+  padding: 10px;
+  font-weight: lighter;
 }
 
 .run-list {
@@ -62,22 +59,24 @@ a {
 }
 
 .date {
-  color: $Button_Text_Grey;
+  color: $Regular_Text;
 }
 
 .time {
   color: $Button_Green;
   justify-content: flex-end;
+  margin-right: 1rem;
 }
 
 .post-new {
-  display: flex;
-  font-size: 2rem;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: .8rem;
   background: $Button_Green;
   color: $Title_White;
-  border: 10px $Button_Green solid;
+  border: 15px $Button_Green solid;
   border-radius: 50%;
-  float: right;
   text-decoration: none;
 }
 

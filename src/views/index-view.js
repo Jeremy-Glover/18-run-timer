@@ -48,7 +48,7 @@ export default Backbone.View.extend({
       this.$el.append(listItem.render());
     });
 
-    this.$el.append(`<a href="#new" class="post-new"><i class="fa fa-plus-circle"></i></a>`);
+    this.$el.append(`<a href="#new" class="post-new"><i class="fa fa-plus"></i></a>`);
   },
 
 });
